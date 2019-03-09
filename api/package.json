@@ -1,0 +1,19 @@
+{
+  "name": "ruta-cafe-api",
+  "version": "1.0.0",
+  "description": "Primer proyecto full stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon index.js"
+  },
+  "author": "Andrea Mendi",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
