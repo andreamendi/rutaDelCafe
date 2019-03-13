@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --fuenteBase: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --colorBackgroud: #25291C;
+    --merriweather: 'Merriweather', serif;
+    --raleway: 'Raleway', sans-serif;
+    --muli: 'Muli', sans-serif;
+    --josefinSans: 'Josefin Sans', sans-serif;
+    --anton: 'Anton', sans-serif;
+}
+
+
+.header-background{
+    background-color: var(--colorBackgroud);
+    height: 10vw;
+    text-align: center;
+}
+.header-background h1{
+    box-sizing: border-box;
+    padding-top: 2%;
+    color: #fff;
+    font-size: 3vw;
+    font-family: var(--raleway);
+}
+.header-background span{
+    margin-left: 10%;
+    display: flex;
+    justify-content: right;
+    box-sizing: border-box;
+    padding-top: 2%;
+    color: #E3E7D3;
+    font-size: 1.7vw;
+    font-family: var(--raleway);
+}
+.cards-restaurants{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    align-items: stretch;
+}
+.card-restaurant{
+    background-color: #C6E2E9 ;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 10px;
+    width: 200px;
+    min-height: 50px;
+    font-size: 1vw;
+    
+}
+#cardRestaurant1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.info-rest{
+    width: 60%;
+}
+.map-rest{
+    width: 40%;
+    background-color: #A7BED3;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+    .card-restaurant{
+        font-size: 15px;
+        color: red;
+    }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) { 
+    .card-restaurant{
+        font-size: 15px;
+        color: blue;
+
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card-restaurant{
+        font-size: 15px;
+        color: orangered;
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+    .card-restaurant{
+        font-size: 15px;
+        color: teal;
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px){
+    .card-restaurant{
+        font-size: 15px;
+        color: tomato;
+    }
+}
