@@ -10,21 +10,16 @@ function callApi(apiUrl){
     .then(resp => resp.json())
     .then(respJson => {
         console.log(respJson)
-        imprimirRestaurantes(respJson.restaurantes);
+        // ordenarPorNombre(respJson.restaurantes);
+         ordenarPorRating(respJson.restaurantes);
+
     });
 }
 
-
-
 function imprimirRestaurantes(restaurantes){
     let restaurant;
-
-    let ranking = 0.1;
-
-
+    card1.innerHTML ='';
     for(restaurant of restaurantes){
-        console.log(`Antes del if ${restaurant.rating}`);
-        console.log(`111 ${restaurant.rating}`);
         card1.innerHTML += `
         <div class="card-restaurant">
             <p class="name-restaurant">Nombre: ${restaurant.nombre}</p>
@@ -37,6 +32,7 @@ function imprimirRestaurantes(restaurantes){
             map: map,
             name: restaurant.name
         });
+    
     }
 }
 let map;
@@ -48,3 +44,47 @@ function initMap(){
     });
     callApi(restauranteApi);
 }
+
+
+function ordenarPorNombre(listaRes){
+    let orderName =  listaRes.sort(function(a,b){
+        if (a.nombre < b.nombre){
+            return -1
+        } else {
+            return 1
+        }
+    }); //Modifica el array.
+    console.log('Name', orderName);
+    imprimirRestaurantes(orderName);
+}   
+
+
+function ordenarPorRating(listaRes){
+    let orderRating =  listaRes.sort(function(a,b){
+        if (a.rating < b.rating){
+            return -1
+        } else {
+            return 1
+        }
+    });
+    
+    console.log('Rating', orderRating);
+    imprimirRestaurantes(orderRating);
+}
+
+
+
+// let nuevaLista = [];
+// for (let i = 0; i < listaPrueba.length; i++){
+//     let palabraActual = listaPrueba[i];
+//     for(let palabra )
+//     if(i == listaPrueba.length -1){
+//         palabraSig = listaPrueba[0]
+//     }
+//     if(palabraActual < palabraSig){
+//         nuevaLista.push(palabraActual);
+//     } else {
+//         nuevaLista.push(palabraSig);
+//     }
+// }
+// console.log(nuevaLista);
